@@ -19,6 +19,7 @@ container=$(buildah from docker.io/wordpress:6.8.2-php8.3-apache)
 buildah run "${container}" /bin/sh <<'EOF'
 set -e
 docker-php-ext-install pdo_mysql
+docker-php-ext-install calendar
 EOF
 # Commit the image
 buildah commit --rm "${container}" "${repobase}/${reponame}"
