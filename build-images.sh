@@ -53,7 +53,7 @@ buildah config --entrypoint=/ \
     --label="org.nethserver.authorizations=traefik@node:routeadm" \
     --label="org.nethserver.tcp-ports-demand=3" \
     --label="org.nethserver.rootfull=0" \
-    --label="org.nethserver.images=docker.io/mariadb:10.11.14 ${repobase}/wordpress-app:${IMAGETAG:-latest}" \
+    --label="org.nethserver.images=docker.io/mariadb:10.11.15 ${repobase}/wordpress-app:${IMAGETAG:-latest}" \
     "${container}"
 # Commit the image
 buildah commit "${container}" "${repobase}/${reponame}"
