@@ -54,6 +54,7 @@ buildah config --entrypoint=/ \
     --label="org.nethserver.tcp-ports-demand=3" \
     --label="org.nethserver.rootfull=0" \
     --label="org.nethserver.images=docker.io/mariadb:10.11.18 ${repobase}/wordpress-app:${IMAGETAG:-latest}" \
+    --label="org.nethserver.min-core=3.20.1" \
     "${container}"
 # Commit the image
 buildah commit "${container}" "${repobase}/${reponame}"
