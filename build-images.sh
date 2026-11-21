@@ -15,7 +15,7 @@ repobase="${REPOBASE:-ghcr.io/nethserver}"
 
 #Create webtop-webapp container
 reponame="wordpress-app"
-container=$(buildah from docker.io/wordpress:7.1.3-php8.5-apache@sha256:ce31904fa1e51b73543fa2e35cc8f1747589b2abf48dc747b422749b88b77e9e)
+container=$(buildah from docker.io/wordpress:7.1.4-php8.5-apache@sha256:346b6d0ed10345daba924f3fa540b79c58f4e319e14287b0a3bdb92ccb233b8b)
 buildah run "${container}" /bin/sh <<'EOF'
 set -e
 docker-php-ext-install pdo_mysql
